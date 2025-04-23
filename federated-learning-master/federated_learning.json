@@ -1,0 +1,75 @@
+{
+  "main": [
+    {
+      "dataset": [
+        "mnist",
+        "fashionmnist",
+        "cifar10"
+      ],
+      "net": [
+        "logistic"
+      ],
+      "iterations": [
+        2000
+      ],
+      "n_clients": [
+        2000
+      ],
+      "participation_rate": [
+        0.5
+      ],
+      "classes_per_client": [
+        10
+      ],
+      "batch_size": [
+        1
+      ],
+      "balancedness": [
+        1.0
+      ],
+      "momentum": [
+        0.9
+      ],
+      "compression": [
+        [
+          "none",
+          {}
+        ]
+      ],
+      "log_frequency": [
+        30
+      ],
+      "log_path": [
+        "results/mnist/",
+        "results/fashionmnist/",
+        "results/cifar10/"
+      ],
+      "test_batch_size": 100,
+      "rounds": 200,
+      "log_id": null,
+      "lr": 0.01,
+      "aggregation": "FedAvg",
+      "local_iterations": 1,
+      "compression_up": "none",
+      "accumulation_up": "none",
+      "compression_down": "none",
+      "accumulation_down": "none",
+      "differential_privacy": {
+        "enabled": false,
+        "clip_bound": 1.0,
+        "noise_multiplier": 0.5,
+        "delta": 1e-5
+      },
+      "comparison": {
+        "run_non_dp": true,
+        "run_dp": true,
+        "noise_multipliers": [
+          0.1,
+          0.5,
+          1.0,
+          2.0
+        ]
+      }
+    }
+  ]
+}
